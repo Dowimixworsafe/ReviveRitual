@@ -24,10 +24,10 @@ haunt-used: "&8[&7Duch&8] &7Wydales przerazliwy dzwiek..."
 haunt-cooldown: "&cMusisz odczekac {TIME}s przed ponownym nawiedzaniem."
 
 # Wiadomość wyrzucenia z serwera (użyj \n dla nowej linii)
-kick-message-layout: "&c☠ &4&lUMARŁEŚ! &c☠\n\n&7Zostałeś zablokowany na tym serwerze.\n&eCzas trwania bana: &f{TIME}\n\n&7Musisz odczekać lub zostać wskrzeszonym."
+kick-message-layout: "&c☠ &4&lUMARŁEŚ! &c☠\n\n&7Zostałeś zablokowany na tym serwerze.\n&eCzas trwania bana: &f{TIME}\n\n&7Musisz odczekać lub zostać wskrzeszonym poprzez rytułał."
 
 # Wiadomość przy próbie wejścia na serwer (Screen blokady)
-kick-screen-layout: "&c☠ &4&lUMARŁEŚ! &c☠\n\n&7Zostałeś zablokowany na tym serwerze.\n&ePowód: &fŚmierć w trybie Hardcore\n\n&cWrócisz o: &6&l{DATE}\n&7Pozostało: &e{TIME}"
+kick-screen-layout: "&c☠ &4&lUMARŁEŚ! &c☠\n\n&7Zostałeś zablokowany na tym serwerze.\n&cMusisz odczekać:\n&6{TIME} lub zostać wskrzeszonym poprzez rytułał."
 
 # Wyrzucenie spectatora (brak graczy)
-kick-spectator-no-players: "&cBrak żywych graczy do oglądania.\n\n&7Zostaniesz wskrzeszony za:\n&6{TIME}"
+kick-spectator-no-players: "&cBrak żywych graczy do oglądania.\n\n&7Musisz odczekać:\n&6{TIME} lub zostać wskrzeszonym poprzez rytułał."

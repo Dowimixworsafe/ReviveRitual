@@ -1,0 +1,33 @@
+no-permission: "&cNie masz uprawnień!"
+reload-success: "&aKonfiguracja i wiadomości przeładowane!"
+mode-changed: "&aTryb kary zmieniony na: &e{MODE}"
+time-changed: "&aCzas kary zmieniony na: &e{TIME} &aminut."
+
+cmd-help-revive: "Wskrzesz gracza"
+cmd-help-reload: "Przeładuj plugin"
+cmd-help-mode: "Zmień tryb"
+cmd-help-time: "Zmień czas"
+
+admin-revive-success: "&aGracz {PLAYER} został wskrzeszony przez admina."
+player-not-dead: "&cTen gracz nie potrzebuje wskrzeszenia."
+
+potion-no-name: "&eNazwij miksturę nickiem gracza w kowadle!"
+cauldron-fill: "&4Kocioł przyjął ofiarę krwi dla gracza: &6{PLAYER}"
+revive-broadcast: "&cRytuał zakończony! &6{PLAYER} &cpowraca z zaświatów!"
+revive-success: "&6Zostałeś wskrzeszony!"
+
+ghost-mode-start: "&cStałeś się DUCHEM. Czekaj na czas lub rytuał."
+action-bar-timer: "&cRespawn za: &6{TIME}"
+
+haunt-item-name: "&4☠ Nawiedzanie ☠"
+haunt-used: "&8[&7Duch&8] &7Wydales przerazliwy dzwiek..."
+haunt-cooldown: "&cMusisz odczekac {TIME}s przed ponownym nawiedzaniem."
+
+# Wiadomość wyrzucenia z serwera (użyj \n dla nowej linii)
+kick-message-layout: "&c☠ &4&lUMARŁEŚ! &c☠\n\n&7Zostałeś zablokowany na tym serwerze.\n&eCzas trwania bana: &f{TIME}\n\n&7Musisz odczekać lub zostać wskrzeszonym."
+
+# Wiadomość przy próbie wejścia na serwer (Screen blokady)
+kick-screen-layout: "&c☠ &4&lUMARŁEŚ! &c☠\n\n&7Zostałeś zablokowany na tym serwerze.\n&ePowód: &fŚmierć w trybie Hardcore\n\n&cWrócisz o: &6&l{DATE}\n&7Pozostało: &e{TIME}"
+
+# Wyrzucenie spectatora (brak graczy)
+kick-spectator-no-players: "&cBrak żywych graczy do oglądania.\n\n&7Zostaniesz wskrzeszony za:\n&6{TIME}"

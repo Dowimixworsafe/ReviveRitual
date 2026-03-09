@@ -1,0 +1,33 @@
+no-permission: "&cYou do not have permission!"
+reload-success: "&aConfiguration and messages reloaded!"
+mode-changed: "&aPunishment mode changed to: &e{MODE}"
+time-changed: "&aPunishment time changed to: &e{TIME} &aminutes."
+
+cmd-help-revive: "Revive a player"
+cmd-help-reload: "Reload plugin"
+cmd-help-mode: "Change mode"
+cmd-help-time: "Change duration"
+
+admin-revive-success: "&aPlayer {PLAYER} has been revived by an admin."
+player-not-dead: "&cThis player does not need reviving."
+
+potion-no-name: "&eRename the potion to the player's name in an anvil!"
+cauldron-fill: "&4The cauldron accepted the blood sacrifice for: &6{PLAYER}"
+revive-broadcast: "&cRitual complete! &6{PLAYER} &creturns from the dead!"
+revive-success: "&6You have been revived!"
+
+haunt-item-name: "&4☠ Haunt ☠"
+haunt-used: "&8[&7Ghost&8] &7You released a terrifying sound..."
+haunt-cooldown: "&cYou must wait {TIME}s before haunting again."
+
+ghost-mode-start: "&cYou have become a GHOST. Wait for the timer or a ritual."
+action-bar-timer: "&cRespawn in: &6{TIME}"
+
+# Kick message (use \n for new line)
+kick-message-layout: "&c☠ &4&lYOU DIED! &c☠\n\n&7You have been banned from this server.\n&eBan duration: &f{TIME}\n\n&7You must wait or be revived."
+
+# Login block screen
+kick-screen-layout: "&c☠ &4&lYOU DIED! &c☠\n\n&7You are banned from this server.\n&eReason: &fDeath in Hardcore Mode\n\n&cYou will return at: &6&l{DATE}\n&7Time remaining: &e{TIME}"
+
+# Spectator kick (no players to watch)
+kick-spectator-no-players: "&cNo living players to spectate.\n\n&7You will be revived in:\n&6{TIME}"

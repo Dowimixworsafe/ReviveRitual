@@ -5,8 +5,28 @@ time-changed: "&aCzas kary zmieniony na: &e{TIME} &aminut."
 
 cmd-help-revive: "Wskrzesz gracza"
 cmd-help-reload: "Przeładuj plugin"
+cmd-help-lang: "Zmień język"
 cmd-help-mode: "Zmień tryb"
 cmd-help-time: "Zmień czas"
+cmd-help-mob: "Zmień moba ducha"
+cmd-help-fly: "Przełącz latanie ducha"
+cmd-help-glow: "Przełącz świecenie ducha"
+cmd-help-haunt: "Przełącz straszenie"
+cmd-help-haunt-delay: "Zmień cooldown straszenia"
+cmd-help-graves: "Przełącz generowanie grobów"
+
+cmd-usage-set: "&cUzycie: /reviveme set <opcja> <wartosc>"
+lang-changed: "&aZmieniono jezyk na: &e{LANG}"
+mode-invalid: "&cDostepne tryby: ghost, ban, spectator"
+time-invalid: "&cBlad: Podano nieprawidlowa liczbe."
+mob-changed: "&aZmieniono moba ducha na: &e{MOB}"
+mob-invalid: "&cZly mob! Uzyj np. ALLAY, VEX, PARROT."
+fly-changed: "&aLatanie ducha ustawione na: &e{STATE}"
+glow-changed: "&aSwiecenie ducha ustawione na: &e{STATE}"
+haunt-set: "&aStraszenie przez duchy ustawione na: &e{STATE}"
+haunt-delay-changed: "&aCooldown straszenia ustawiony na: &e{TIME}s"
+graves-changed: "&aGenerowanie grobów ustawione na: &e{STATE}"
+player-unknown: "&cGracz nieznany."
 
 admin-revive-success: "&aGracz {PLAYER} został wskrzeszony przez admina."
 player-not-dead: "&cTen gracz nie potrzebuje wskrzeszenia."
@@ -19,15 +39,25 @@ revive-success: "&6Zostałeś wskrzeszony!"
 ghost-mode-start: "&cStałeś się DUCHEM. Czekaj na czas lub rytuał."
 action-bar-timer: "&cRespawn za: &6{TIME}"
 
+gui-spectator-title: "Spectator (Strona {PAGE})"
+gui-spectator-teleport: "&aTeleportowano do gracza: &e{PLAYER}"
+gui-spectator-prev: "&cPoprzednia strona"
+gui-spectator-next: "&aNastepna strona"
+
 haunt-item-name: "&4☠ Nawiedzanie ☠"
 haunt-used: "&8[&7Duch&8] &7Wydales przerazliwy dzwiek..."
 haunt-cooldown: "&cMusisz odczekac {TIME}s przed ponownym nawiedzaniem."
 
 # Wiadomość wyrzucenia z serwera (użyj \n dla nowej linii)
-kick-message-layout: "&c☠ &4&lUMARŁEŚ! &c☠\n\n&7Zostałeś zablokowany na tym serwerze.\n&eCzas trwania bana: &f{TIME}\n\n&7Musisz odczekać lub zostać wskrzeszonym."
+kick-message-layout: "&c☠ &4&lUMARŁEŚ! &c☠\n\n&7Zostałeś zablokowany na tym serwerze.\n&eCzas trwania bana: &f{TIME}\n\n&7Musisz odczekać lub zostać wskrzeszonym poprzez rytułał."
 
 # Wiadomość przy próbie wejścia na serwer (Screen blokady)
-kick-screen-layout: "&c☠ &4&lUMARŁEŚ! &c☠\n\n&7Zostałeś zablokowany na tym serwerze.\n&ePowód: &fŚmierć w trybie Hardcore\n\n&cWrócisz o: &6&l{DATE}\n&7Pozostało: &e{TIME}"
+kick-screen-layout: "&c☠ &4&lUMARŁEŚ! &c☠\n\n&7Zostałeś zablokowany na tym serwerze.\n&cMusisz odczekać:\n&6{TIME} lub zostać wskrzeszonym poprzez rytułał."
 
 # Wyrzucenie spectatora (brak graczy)
-kick-spectator-no-players: "&cBrak żywych graczy do oglądania.\n\n&7Zostaniesz wskrzeszony za:\n&6{TIME}"
+kick-spectator-no-players: "&cBrak żywych graczy do oglądania.\n\n&7Musisz odczekać:\n&6{TIME} lub zostać wskrzeszonym poprzez rytułał."
+
+# Nagrobki
+grave-looted: "&aPodniosłeś swój nagrobek! Odzyskałeś przedmioty i poziom expa."
+grave-not-yours: "&cNie możesz zniszczyć nie swojego nagrobka!"
+grave-cannot-loot-dead: "&cNie możesz plądrować grobu będąc duchem/martwym!"

@@ -5,8 +5,28 @@ time-changed: "&aPunishment time changed to: &e{TIME} &aminutes."
 
 cmd-help-revive: "Revive a player"
 cmd-help-reload: "Reload plugin"
+cmd-help-lang: "Change language"
 cmd-help-mode: "Change mode"
 cmd-help-time: "Change duration"
+cmd-help-mob: "Change ghost mob"
+cmd-help-fly: "Toggle ghost fly"
+cmd-help-glow: "Toggle ghost glow"
+cmd-help-haunt: "Toggle haunting"
+cmd-help-haunt-delay: "Change haunt cooldown"
+cmd-help-graves: "Toggle graves generation"
+
+cmd-usage-set: "&cUsage: /reviveme set <option> <value>"
+lang-changed: "&aLanguage changed to: &e{LANG}"
+mode-invalid: "&cAvailable modes: ghost, ban, spectator"
+time-invalid: "&cError: Invalid number."
+mob-changed: "&aGhost mob changed to: &e{MOB}"
+mob-invalid: "&cInvalid mob type! Use e.g. ALLAY, VEX, PARROT."
+fly-changed: "&aGhost fly set to: &e{STATE}"
+glow-changed: "&aGhost glowing set to: &e{STATE}"
+haunt-set: "&aGhost haunting set to: &e{STATE}"
+haunt-delay-changed: "&aHaunt delay set to: &e{TIME}s"
+graves-changed: "&aGraves generation set to: &e{STATE}"
+player-unknown: "&cPlayer unknown."
 
 admin-revive-success: "&aPlayer {PLAYER} has been revived by an admin."
 player-not-dead: "&cThis player does not need reviving."
@@ -16,12 +36,17 @@ cauldron-fill: "&4The cauldron accepted the blood sacrifice for: &6{PLAYER}"
 revive-broadcast: "&cRitual complete! &6{PLAYER} &creturns from the dead!"
 revive-success: "&6You have been revived!"
 
+ghost-mode-start: "&cYou have become a GHOST. Wait for the timer or a ritual."
+action-bar-timer: "&cRespawn in: &6{TIME}"
+
+gui-spectator-title: "Spectator (Page {PAGE})"
+gui-spectator-teleport: "&aTeleported to player: &e{PLAYER}"
+gui-spectator-prev: "&cPrevious page"
+gui-spectator-next: "&aNext page"
+
 haunt-item-name: "&4☠ Haunt ☠"
 haunt-used: "&8[&7Ghost&8] &7You released a terrifying sound..."
 haunt-cooldown: "&cYou must wait {TIME}s before haunting again."
-
-ghost-mode-start: "&cYou have become a GHOST. Wait for the timer or a ritual."
-action-bar-timer: "&cRespawn in: &6{TIME}"
 
 # Kick message (use \n for new line)
 kick-message-layout: "&c☠ &4&lYOU DIED! &c☠\n\n&7You have been banned from this server.\n&eBan duration: &f{TIME}\n\n&7You must wait or be revived."
@@ -31,3 +56,8 @@ kick-screen-layout: "&c☠ &4&lYOU DIED! &c☠\n\n&7You are banned from this ser
 
 # Spectator kick (no players to watch)
 kick-spectator-no-players: "&cNo living players to spectate.\n\n&7You will be revived in:\n&6{TIME}"
+
+# Gravestones
+grave-looted: "&aYou retrieved your grave! You recovered your items and XP."
+grave-not-yours: "&cYou cannot destroy a grave that isn't yours!"
+grave-cannot-loot-dead: "&cYou cannot loot a grave while you are dead/a ghost!"

@@ -1,4 +1,4 @@
-package pl.Dowimixworsafe.reviveMe.managers;
+package pl.Dowimixworsafe.reviveRitual.managers;
 
 import org.bukkit.*;
 import org.bukkit.entity.Player;
@@ -6,8 +6,8 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
 import org.bukkit.potion.PotionEffectType;
-import pl.Dowimixworsafe.reviveMe.ReviveMe;
-import pl.Dowimixworsafe.reviveMe.utils.TimeUtils;
+import pl.Dowimixworsafe.reviveRitual.ReviveRitual;
+import pl.Dowimixworsafe.reviveRitual.utils.TimeUtils;
 
 import java.util.*;
 import java.util.concurrent.TimeUnit;
@@ -15,13 +15,13 @@ import java.util.stream.Collectors;
 
 public class PunishmentManager {
 
-    private final ReviveMe plugin;
+    private final ReviveRitual plugin;
     private final ConfigManager configManager;
     private final DataManager dataManager;
     private final GhostManager ghostManager;
     private final Map<UUID, Long> hauntCooldowns = new HashMap<>();
 
-    public PunishmentManager(ReviveMe plugin, ConfigManager configManager, DataManager dataManager,
+    public PunishmentManager(ReviveRitual plugin, ConfigManager configManager, DataManager dataManager,
             GhostManager ghostManager) {
         this.plugin = plugin;
         this.configManager = configManager;

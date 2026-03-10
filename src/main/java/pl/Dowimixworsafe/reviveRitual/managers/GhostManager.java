@@ -1,4 +1,4 @@
-package pl.Dowimixworsafe.reviveMe.managers;
+package pl.Dowimixworsafe.reviveRitual.managers;
 
 import net.md_5.bungee.api.ChatMessageType;
 import net.md_5.bungee.api.chat.TextComponent;
@@ -11,8 +11,8 @@ import org.bukkit.potion.PotionEffectType;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.scoreboard.Scoreboard;
 import org.bukkit.scoreboard.Team;
-import pl.Dowimixworsafe.reviveMe.ReviveMe;
-import pl.Dowimixworsafe.reviveMe.utils.TimeUtils;
+import pl.Dowimixworsafe.reviveRitual.ReviveRitual;
+import pl.Dowimixworsafe.reviveRitual.utils.TimeUtils;
 
 import java.util.HashMap;
 import java.util.List;
@@ -22,14 +22,14 @@ import java.util.stream.Collectors;
 
 public class GhostManager {
 
-    private final ReviveMe plugin;
+    private final ReviveRitual plugin;
     private final DataManager dataManager;
     private final ConfigManager configManager;
 
     public final Map<UUID, UUID> ghostEntities = new HashMap<>();
     private Team ghostTeam;
 
-    public GhostManager(ReviveMe plugin, DataManager dataManager, ConfigManager configManager) {
+    public GhostManager(ReviveRitual plugin, DataManager dataManager, ConfigManager configManager) {
         this.plugin = plugin;
         this.dataManager = dataManager;
         this.configManager = configManager;
@@ -38,9 +38,9 @@ public class GhostManager {
 
     private void setupGhostTeam() {
         Scoreboard scoreboard = Bukkit.getScoreboardManager().getMainScoreboard();
-        ghostTeam = scoreboard.getTeam("ReviveMeGhosts");
+        ghostTeam = scoreboard.getTeam("ReviveRitualGhosts");
         if (ghostTeam == null) {
-            ghostTeam = scoreboard.registerNewTeam("ReviveMeGhosts");
+            ghostTeam = scoreboard.registerNewTeam("ReviveRitualGhosts");
         }
         ghostTeam.setOption(Team.Option.COLLISION_RULE, Team.OptionStatus.NEVER);
         ghostTeam.setCanSeeFriendlyInvisibles(true);

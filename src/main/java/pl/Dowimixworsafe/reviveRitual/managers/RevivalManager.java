@@ -1,4 +1,4 @@
-package pl.Dowimixworsafe.reviveMe.managers;
+package pl.Dowimixworsafe.reviveRitual.managers;
 
 import org.bukkit.*;
 import org.bukkit.block.Block;
@@ -6,18 +6,18 @@ import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.TextDisplay;
-import pl.Dowimixworsafe.reviveMe.ReviveMe;
+import pl.Dowimixworsafe.reviveRitual.ReviveRitual;
 
 import java.util.Collection;
 
 public class RevivalManager {
 
-    private final ReviveMe plugin;
+    private final ReviveRitual plugin;
     private final DataManager dataManager;
     private final ConfigManager configManager;
     private final String BLOOD_TAG = "custom_blood_liquid";
 
-    public RevivalManager(ReviveMe plugin, DataManager dataManager, ConfigManager configManager) {
+    public RevivalManager(ReviveRitual plugin, DataManager dataManager, ConfigManager configManager) {
         this.plugin = plugin;
         this.dataManager = dataManager;
         this.configManager = configManager;

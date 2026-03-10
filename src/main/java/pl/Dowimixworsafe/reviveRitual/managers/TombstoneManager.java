@@ -1,4 +1,4 @@
-package pl.Dowimixworsafe.reviveMe.managers;
+package pl.Dowimixworsafe.reviveRitual.managers;
 
 import org.bukkit.*;
 import org.bukkit.entity.*;
@@ -7,7 +7,7 @@ import org.bukkit.inventory.meta.SkullMeta;
 import org.bukkit.util.Transformation;
 import org.joml.AxisAngle4f;
 import org.joml.Vector3f;
-import pl.Dowimixworsafe.reviveMe.ReviveMe;
+import pl.Dowimixworsafe.reviveRitual.ReviveRitual;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -17,10 +17,10 @@ import java.util.UUID;
 
 public class TombstoneManager {
 
-    private final ReviveMe plugin;
+    private final ReviveRitual plugin;
     private final DataManager dataManager;
 
-    public TombstoneManager(ReviveMe plugin, DataManager dataManager) {
+    public TombstoneManager(ReviveRitual plugin, DataManager dataManager) {
         this.plugin = plugin;
         this.dataManager = dataManager;
     }

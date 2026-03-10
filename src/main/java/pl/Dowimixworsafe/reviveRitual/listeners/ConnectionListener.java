@@ -1,12 +1,12 @@
-package pl.Dowimixworsafe.reviveMe.listeners;
+package pl.Dowimixworsafe.reviveRitual.listeners;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerPreLoginEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
-import pl.Dowimixworsafe.reviveMe.ReviveMe;
-import pl.Dowimixworsafe.reviveMe.utils.TimeUtils;
+import pl.Dowimixworsafe.reviveRitual.ReviveRitual;
+import pl.Dowimixworsafe.reviveRitual.utils.TimeUtils;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -15,9 +15,9 @@ import java.util.concurrent.TimeUnit;
 
 public class ConnectionListener implements Listener {
 
-    private final ReviveMe plugin;
+    private final ReviveRitual plugin;
 
-    public ConnectionListener(ReviveMe plugin) {
+    public ConnectionListener(ReviveRitual plugin) {
         this.plugin = plugin;
     }
 

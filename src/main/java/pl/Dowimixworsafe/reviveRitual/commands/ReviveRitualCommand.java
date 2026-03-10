@@ -1,4 +1,4 @@
-package pl.Dowimixworsafe.reviveMe.commands;
+package pl.Dowimixworsafe.reviveRitual.commands;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -9,20 +9,20 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
-import pl.Dowimixworsafe.reviveMe.ReviveMe;
-import pl.Dowimixworsafe.reviveMe.managers.*;
+import pl.Dowimixworsafe.reviveRitual.ReviveRitual;
+import pl.Dowimixworsafe.reviveRitual.managers.*;
 
 import java.util.UUID;
 
-public class ReviveMeCommand implements CommandExecutor {
+public class ReviveRitualCommand implements CommandExecutor {
 
-    private final ReviveMe plugin;
+    private final ReviveRitual plugin;
     private final ConfigManager configManager;
     private final DataManager dataManager;
     private final RevivalManager revivalManager;
     private final PunishmentManager punishmentManager;
 
-    public ReviveMeCommand(ReviveMe plugin, ConfigManager configManager, DataManager dataManager,
+    public ReviveRitualCommand(ReviveRitual plugin, ConfigManager configManager, DataManager dataManager,
             RevivalManager revivalManager, PunishmentManager punishmentManager) {
         this.plugin = plugin;
         this.configManager = configManager;
@@ -39,28 +39,28 @@ public class ReviveMeCommand implements CommandExecutor {
         }
 
         if (args.length == 0) {
-            sender.sendMessage(ChatColor.YELLOW + "--- ReviveMe Admin ---");
-            sender.sendMessage(ChatColor.GOLD + "/reviveme <nick>" + ChatColor.GRAY + " - "
+            sender.sendMessage(ChatColor.YELLOW + "--- ReviveRitual Admin ---");
+            sender.sendMessage(ChatColor.GOLD + "/rr <nick>" + ChatColor.GRAY + " - "
                     + configManager.getMsg("cmd-help-revive"));
-            sender.sendMessage(ChatColor.GOLD + "/reviveme reload" + ChatColor.GRAY + " - "
+            sender.sendMessage(ChatColor.GOLD + "/rr reload" + ChatColor.GRAY + " - "
                     + configManager.getMsg("cmd-help-reload"));
-            sender.sendMessage(ChatColor.GOLD + "/reviveme set lang <pl/en>" + ChatColor.GRAY + " - "
+            sender.sendMessage(ChatColor.GOLD + "/rr set lang <pl/en>" + ChatColor.GRAY + " - "
                     + configManager.getMsg("cmd-help-lang"));
-            sender.sendMessage(ChatColor.GOLD + "/reviveme set mode <ghost/ban/spectator>" + ChatColor.GRAY + " - "
+            sender.sendMessage(ChatColor.GOLD + "/rr set mode <ghost/ban/spectator>" + ChatColor.GRAY + " - "
                     + configManager.getMsg("cmd-help-mode"));
-            sender.sendMessage(ChatColor.GOLD + "/reviveme set time <min>" + ChatColor.GRAY + " - "
+            sender.sendMessage(ChatColor.GOLD + "/rr set time <min>" + ChatColor.GRAY + " - "
                     + configManager.getMsg("cmd-help-time"));
-            sender.sendMessage(ChatColor.GOLD + "/reviveme set mob <TYPE>" + ChatColor.GRAY + " - "
+            sender.sendMessage(ChatColor.GOLD + "/rr set mob <TYPE>" + ChatColor.GRAY + " - "
                     + configManager.getMsg("cmd-help-mob"));
-            sender.sendMessage(ChatColor.GOLD + "/reviveme set fly <true/false>" + ChatColor.GRAY + " - "
+            sender.sendMessage(ChatColor.GOLD + "/rr set fly <true/false>" + ChatColor.GRAY + " - "
                     + configManager.getMsg("cmd-help-fly"));
-            sender.sendMessage(ChatColor.GOLD + "/reviveme set glow <true/false>" + ChatColor.GRAY + " - "
+            sender.sendMessage(ChatColor.GOLD + "/rr set glow <true/false>" + ChatColor.GRAY + " - "
                     + configManager.getMsg("cmd-help-glow"));
-            sender.sendMessage(ChatColor.GOLD + "/reviveme set haunt <true/false>" + ChatColor.GRAY + " - "
+            sender.sendMessage(ChatColor.GOLD + "/rr set haunt <true/false>" + ChatColor.GRAY + " - "
                     + configManager.getMsg("cmd-help-haunt"));
-            sender.sendMessage(ChatColor.GOLD + "/reviveme set haunt-delay <seconds>" + ChatColor.GRAY + " - "
+            sender.sendMessage(ChatColor.GOLD + "/rr set haunt-delay <seconds>" + ChatColor.GRAY + " - "
                     + configManager.getMsg("cmd-help-haunt-delay"));
-            sender.sendMessage(ChatColor.GOLD + "/reviveme set graves <true/false>" + ChatColor.GRAY + " - "
+            sender.sendMessage(ChatColor.GOLD + "/rr set graves <true/false>" + ChatColor.GRAY + " - "
                     + configManager.getMsg("cmd-help-graves"));
             return true;
         }

@@ -1,4 +1,4 @@
-package pl.Dowimixworsafe.reviveMe.listeners;
+package pl.Dowimixworsafe.reviveRitual.listeners;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -7,16 +7,16 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.PlayerRespawnEvent;
 import org.bukkit.scheduler.BukkitRunnable;
-import pl.Dowimixworsafe.reviveMe.ReviveMe;
-import pl.Dowimixworsafe.reviveMe.utils.TimeUtils;
+import pl.Dowimixworsafe.reviveRitual.ReviveRitual;
+import pl.Dowimixworsafe.reviveRitual.utils.TimeUtils;
 
 import java.util.UUID;
 
 public class DeathListener implements Listener {
 
-    private final ReviveMe plugin;
+    private final ReviveRitual plugin;
 
-    public DeathListener(ReviveMe plugin) {
+    public DeathListener(ReviveRitual plugin) {
         this.plugin = plugin;
     }
 

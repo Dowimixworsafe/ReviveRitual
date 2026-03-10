@@ -15,7 +15,7 @@ cmd-help-haunt: "Toggle haunting"
 cmd-help-haunt-delay: "Change haunt cooldown"
 cmd-help-graves: "Toggle graves generation"
 
-cmd-usage-set: "&cUsage: /reviveme set <option> <value>"
+cmd-usage-set: "&cUsage: /rr set <option> <value>"
 lang-changed: "&aLanguage changed to: &e{LANG}"
 mode-invalid: "&cAvailable modes: ghost, ban, spectator"
 time-invalid: "&cError: Invalid number."

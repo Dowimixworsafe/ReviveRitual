@@ -1,4 +1,4 @@
-package pl.Dowimixworsafe.reviveMe.listeners;
+package pl.Dowimixworsafe.reviveRitual.listeners;
 
 import org.bukkit.GameMode;
 import org.bukkit.Material;
@@ -11,13 +11,13 @@ import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.event.player.PlayerToggleSneakEvent;
 import org.bukkit.inventory.meta.SkullMeta;
 import org.bukkit.scheduler.BukkitRunnable;
-import pl.Dowimixworsafe.reviveMe.ReviveMe;
+import pl.Dowimixworsafe.reviveRitual.ReviveRitual;
 
 public class SpectatorListener implements Listener {
 
-    private final ReviveMe plugin;
+    private final ReviveRitual plugin;
 
-    public SpectatorListener(ReviveMe plugin) {
+    public SpectatorListener(ReviveRitual plugin) {
         this.plugin = plugin;
     }
 

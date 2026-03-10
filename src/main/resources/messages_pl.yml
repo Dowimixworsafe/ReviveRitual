@@ -15,7 +15,7 @@ cmd-help-haunt: "Przełącz straszenie"
 cmd-help-haunt-delay: "Zmień cooldown straszenia"
 cmd-help-graves: "Przełącz generowanie grobów"
 
-cmd-usage-set: "&cUzycie: /reviveme set <opcja> <wartosc>"
+cmd-usage-set: "&cUzycie: /rr set <opcja> <wartosc>"
 lang-changed: "&aZmieniono jezyk na: &e{LANG}"
 mode-invalid: "&cDostepne tryby: ghost, ban, spectator"
 time-invalid: "&cBlad: Podano nieprawidlowa liczbe."

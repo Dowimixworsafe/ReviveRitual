@@ -1,4 +1,4 @@
-package pl.Dowimixworsafe.reviveMe.utils;
+package pl.Dowimixworsafe.reviveRitual.utils;
 
 import java.util.concurrent.TimeUnit;
 

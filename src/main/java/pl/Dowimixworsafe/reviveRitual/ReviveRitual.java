@@ -1,13 +1,13 @@
-package pl.Dowimixworsafe.reviveMe;
+package pl.Dowimixworsafe.reviveRitual;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
-import pl.Dowimixworsafe.reviveMe.commands.ReviveMeCommand;
-import pl.Dowimixworsafe.reviveMe.listeners.*;
-import pl.Dowimixworsafe.reviveMe.managers.*;
+import pl.Dowimixworsafe.reviveRitual.commands.ReviveRitualCommand;
+import pl.Dowimixworsafe.reviveRitual.listeners.*;
+import pl.Dowimixworsafe.reviveRitual.managers.*;
 
-public final class ReviveMe extends JavaPlugin {
+public final class ReviveRitual extends JavaPlugin {
 
     private ConfigManager configManager;
     private DataManager dataManager;
@@ -29,7 +29,7 @@ public final class ReviveMe extends JavaPlugin {
         this.punishmentManager = new PunishmentManager(this, configManager, dataManager, ghostManager);
 
         getCommand("reviveme")
-                .setExecutor(new ReviveMeCommand(this, configManager, dataManager, revivalManager, punishmentManager));
+                .setExecutor(new ReviveRitualCommand(this, configManager, dataManager, revivalManager, punishmentManager));
 
         getServer().getPluginManager().registerEvents(new GhostListener(this), this);
         getServer().getPluginManager().registerEvents(new SpectatorListener(this), this);

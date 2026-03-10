@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>pl.dowimixworsafe</groupId>
-    <artifactId>reviveme</artifactId>
+    <artifactId>reviveritual</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>reviveme</name>
+    <name>reviveritual</name>
 
     <properties>
         <java.version>21</java.version>

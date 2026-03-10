@@ -1,9 +1,9 @@
-package pl.Dowimixworsafe.reviveMe.managers;
+package pl.Dowimixworsafe.reviveRitual.managers;
 
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
-import pl.Dowimixworsafe.reviveMe.ReviveMe;
+import pl.Dowimixworsafe.reviveRitual.ReviveRitual;
 
 import java.io.File;
 import java.io.IOException;
@@ -11,11 +11,11 @@ import java.util.UUID;
 
 public class DataManager {
 
-    private final ReviveMe plugin;
+    private final ReviveRitual plugin;
     private File dataFile;
     private FileConfiguration dataConfig;
 
-    public DataManager(ReviveMe plugin) {
+    public DataManager(ReviveRitual plugin) {
         this.plugin = plugin;
         createDataFile();
     }

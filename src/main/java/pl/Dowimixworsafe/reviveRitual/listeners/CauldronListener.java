@@ -1,4 +1,4 @@
-package pl.Dowimixworsafe.reviveMe.listeners;
+package pl.Dowimixworsafe.reviveRitual.listeners;
 
 import org.bukkit.*;
 import org.bukkit.block.Block;
@@ -15,18 +15,18 @@ import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.PotionMeta;
 import org.bukkit.potion.PotionType;
-import pl.Dowimixworsafe.reviveMe.ReviveMe;
+import pl.Dowimixworsafe.reviveRitual.ReviveRitual;
 
 import java.util.Collection;
 import java.util.UUID;
 
 public class CauldronListener implements Listener {
 
-    private final ReviveMe plugin;
+    private final ReviveRitual plugin;
     private final String BLOOD_TAG = "custom_blood_liquid";
     private final String TARGET_PREFIX = "target_player_";
 
-    public CauldronListener(ReviveMe plugin) {
+    public CauldronListener(ReviveRitual plugin) {
         this.plugin = plugin;
     }
 

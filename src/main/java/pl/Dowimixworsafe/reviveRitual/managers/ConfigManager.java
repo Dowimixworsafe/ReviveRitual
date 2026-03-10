@@ -1,19 +1,19 @@
-package pl.Dowimixworsafe.reviveMe.managers;
+package pl.Dowimixworsafe.reviveRitual.managers;
 
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
-import pl.Dowimixworsafe.reviveMe.ReviveMe;
+import pl.Dowimixworsafe.reviveRitual.ReviveRitual;
 
 import java.io.File;
 
 public class ConfigManager {
 
-    private final ReviveMe plugin;
+    private final ReviveRitual plugin;
     private File messagesFile;
     private FileConfiguration messagesConfig;
 
-    public ConfigManager(ReviveMe plugin) {
+    public ConfigManager(ReviveRitual plugin) {
         this.plugin = plugin;
         createMessagesFile();
     }

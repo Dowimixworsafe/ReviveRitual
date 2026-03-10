@@ -1,11 +1,11 @@
-name: ReviveMe
+name: ReviveRitual
 version: '1.0'
-main: pl.Dowimixworsafe.reviveMe.ReviveMe
+main: pl.Dowimixworsafe.reviveRitual.ReviveRitual
 api-version: '1.21'
 commands:
-  reviveme:
+  rr:
     description: Manages the revival system.
-    usage: /reviveme <nick> | set <lang/mode/time/mob/fly/glow/tag/haunt/haunt-delay> | reload
+    usage: /rr <nick> | set <lang/mode/time/mob/fly/glow/tag/haunt/haunt-delay> | reload
 permissions:
   reviveme.admin:
     description: Allows access to administrator commands.

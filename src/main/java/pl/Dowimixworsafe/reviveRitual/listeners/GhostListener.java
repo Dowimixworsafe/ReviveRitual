@@ -1,4 +1,4 @@
-package pl.Dowimixworsafe.reviveMe.listeners;
+package pl.Dowimixworsafe.reviveRitual.listeners;
 
 import org.bukkit.Material;
 import org.bukkit.entity.Entity;
@@ -11,13 +11,13 @@ import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.entity.*;
 import org.bukkit.event.inventory.InventoryDragEvent;
 import org.bukkit.event.player.*;
-import pl.Dowimixworsafe.reviveMe.ReviveMe;
+import pl.Dowimixworsafe.reviveRitual.ReviveRitual;
 
 public class GhostListener implements Listener {
 
-    private final ReviveMe plugin;
+    private final ReviveRitual plugin;
 
-    public GhostListener(ReviveMe plugin) {
+    public GhostListener(ReviveRitual plugin) {
         this.plugin = plugin;
     }
 

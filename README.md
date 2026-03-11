@@ -5,8 +5,7 @@
 **A hardcore death & revival system for Paper servers**
 
 ![Minecraft](https://img.shields.io/badge/Minecraft-1.21+-62B47A?style=for-the-badge&logo=modrinth&logoColor=white)
-![Paper](https://img.shields.io/badge/Paper%20API-1.21.10-blue?style=for-the-badge)
-![Java](https://img.shields.io/badge/Java-21-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+[![Paper](https://img.shields.io/badge/Paper%20API-1.21.10-blue?style=for-the-badge)](https://papermc.io/)
 ![License](https://img.shields.io/badge/License-All%20Rights%20Reserved-red?style=for-the-badge)
 
 *Transform death on your server into a dramatic, immersive experience.*

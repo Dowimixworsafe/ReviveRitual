@@ -23,13 +23,34 @@ public class RevivalManager {
         this.configManager = configManager;
     }
 
-    public void revivePlayer(OfflinePlayer target, Location respawnLoc) {
+    public void revivePlayer(OfflinePlayer target, Location respawnLoc, boolean withRitual) {
         if (target.isOnline()) {
             Player p = target.getPlayer();
             if (p != null) {
-                playReviveAnimation(p, target, respawnLoc);
+                if (withRitual) {
+                    dataManager.getData().set("status." + target.getUniqueId(), "reviving");
+                    dataManager.saveData();
+                    playReviveAnimation(p, target, respawnLoc);
+                } else {
+                    executeReviveBase(p, target, respawnLoc);
+                }
             }
         }
+    }
+
+    private void executeReviveBase(Player player, OfflinePlayer target, Location respawnLoc) {
+        dataManager.getData().set("status." + target.getUniqueId(), "alive");
+        dataManager.getData().set("reviveTime." + target.getUniqueId(), null);
+        dataManager.saveData();
+
+        plugin.getPunishmentManager().removeGhostAttributes(player);
+        player.teleport(respawnLoc);
+        player.setGameMode(GameMode.SURVIVAL);
+        player.removePotionEffect(org.bukkit.potion.PotionEffectType.INVISIBILITY);
+        player.setAllowFlight(false);
+        player.setFlying(false);
+        player.getInventory().clear();
+        player.sendMessage(configManager.getMsg("revive-success"));
     }
 
     private void playReviveAnimation(Player player, OfflinePlayer target, Location respawnLoc) {
@@ -63,18 +84,7 @@ public class RevivalManager {
         }.runTaskTimer(plugin, 0L, 1L);
 
         Bukkit.getScheduler().runTaskLater(plugin, () -> {
-            dataManager.getData().set("status." + target.getUniqueId(), "alive");
-            dataManager.getData().set("reviveTime." + target.getUniqueId(), null);
-            dataManager.saveData();
-
-            plugin.getPunishmentManager().removeGhostAttributes(player);
-            player.teleport(respawnLoc);
-            player.setGameMode(GameMode.SURVIVAL);
-            player.removePotionEffect(org.bukkit.potion.PotionEffectType.INVISIBILITY);
-            player.setAllowFlight(false);
-            player.setFlying(false);
-            player.getInventory().clear();
-            player.sendMessage(configManager.getMsg("revive-success"));
+            executeReviveBase(player, target, respawnLoc);
 
             world.strikeLightningEffect(respawnLoc);
 

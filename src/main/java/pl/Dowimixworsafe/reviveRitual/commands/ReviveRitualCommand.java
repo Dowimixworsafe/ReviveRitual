@@ -10,6 +10,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
+import pl.Dowimixworsafe.reviveRitual.utils.TimeUtils;
 import org.bukkit.util.StringUtil;
 import pl.Dowimixworsafe.reviveRitual.ReviveRitual;
 import pl.Dowimixworsafe.reviveRitual.managers.*;
@@ -72,7 +73,7 @@ public class ReviveRitualCommand implements CommandExecutor, TabCompleter {
                     + configManager.getMsg("cmd-help-grave-coords"));
             sender.sendMessage(ChatColor.GOLD + "/rr set cross-loot <true/false>" + ChatColor.GRAY + " - "
                     + configManager.getMsg("cmd-help-cross-loot"));
-            sender.sendMessage(ChatColor.GOLD + "/rr cleargraves <all|nick|radius>" + ChatColor.GRAY + " - "
+            sender.sendMessage(ChatColor.GOLD + "/rr cleargraves <all/nick/radius>" + ChatColor.GRAY + " - "
                     + configManager.getMsg("cmd-help-cleargraves"));
             return true;
         }
@@ -115,12 +116,12 @@ public class ReviveRitualCommand implements CommandExecutor, TabCompleter {
             }
 
             if (option.equals("time")) {
-                try {
-                    int minutes = Integer.parseInt(value);
-                    plugin.getConfig().set("punishment-time-minutes", minutes);
+                long parsedTime = TimeUtils.parseTimeString(value);
+                if (parsedTime > 0) {
+                    plugin.getConfig().set("punishment-time", value);
                     plugin.saveConfig();
-                    sender.sendMessage(configManager.getMsg("time-changed").replace("{TIME}", String.valueOf(minutes)));
-                } catch (NumberFormatException e) {
+                    sender.sendMessage(configManager.getMsg("time-changed").replace("{TIME}", value));
+                } else {
                     sender.sendMessage(configManager.getMsg("time-invalid"));
                 }
                 return true;
@@ -199,7 +200,8 @@ public class ReviveRitualCommand implements CommandExecutor, TabCompleter {
                 boolean cross = Boolean.parseBoolean(value);
                 plugin.getConfig().set("grave-cross-loot", cross);
                 plugin.saveConfig();
-                sender.sendMessage(configManager.getMsg("cross-loot-changed").replace("{STATE}", String.valueOf(cross)));
+                sender.sendMessage(
+                        configManager.getMsg("cross-loot-changed").replace("{STATE}", String.valueOf(cross)));
                 return true;
             }
         }
@@ -285,7 +287,7 @@ public class ReviveRitualCommand implements CommandExecutor, TabCompleter {
         if (dataManager.isDead(targetUUID)) {
             Location loc = (sender instanceof Player) ? ((Player) sender).getLocation()
                     : Bukkit.getWorlds().get(0).getSpawnLocation();
-            revivalManager.revivePlayer(target, loc);
+            revivalManager.revivePlayer(target, loc, false);
             sender.sendMessage(configManager.getMsg("admin-revive-success").replace("{PLAYER}", target.getName()));
         } else {
             sender.sendMessage(configManager.getMsg("player-not-dead"));
@@ -332,8 +334,7 @@ public class ReviveRitualCommand implements CommandExecutor, TabCompleter {
         } else if (args.length == 2 && args[0].equalsIgnoreCase("set")) {
             List<String> options = Arrays.asList(
                     "lang", "mode", "time", "mob", "fly", "glow",
-                    "haunt", "haunt-delay", "graves", "grave-coords", "cross-loot"
-            );
+                    "haunt", "haunt-delay", "graves", "grave-coords", "cross-loot");
             StringUtil.copyPartialMatches(args[1], options, completions);
         } else if (args.length == 2 && args[0].equalsIgnoreCase("cleargraves")) {
             List<String> options = new ArrayList<>(Arrays.asList("all", "10", "25", "50", "100"));
@@ -366,7 +367,7 @@ public class ReviveRitualCommand implements CommandExecutor, TabCompleter {
                     StringUtil.copyPartialMatches(args[2], mobs, completions);
                     break;
                 case "time":
-                    completions.addAll(Arrays.asList("1", "5", "10", "30", "60"));
+                    completions.addAll(Arrays.asList("30s", "5m", "10m", "1h", "2d"));
                     break;
                 case "haunt-delay":
                     completions.addAll(Arrays.asList("15", "30", "45", "60", "120"));

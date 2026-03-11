@@ -92,8 +92,8 @@ language: "en"
 # Punishment mode: ghost / spectator / ban
 punishment-mode: "ghost"
 
-# How long the punishment lasts (minutes)
-punishment-time-minutes: 180
+# How long the punishment lasts (e.g., 30s, 15m, 1h, 1d)
+punishment-time: "3h"
 
 # Ghost Settings
 ghost-mob: "ALLAY"          # Companion mob (any EntityType)
@@ -121,7 +121,7 @@ All commands require **OP** or `reviveritual.admin` permission.
 | `/rr reload` | Reload config & messages |
 | `/rr set lang <en\|pl>` | Change language |
 | `/rr set mode <ghost\|ban\|spectator>` | Change punishment mode |
-| `/rr set time <minutes>` | Change punishment duration |
+| `/rr set time <value>` | Change punishment duration (ex: 3h) |
 | `/rr set mob <TYPE>` | Change ghost companion mob |
 | `/rr set fly <true\|false>` | Toggle ghost flight |
 | `/rr set glow <true\|false>` | Toggle companion glow |

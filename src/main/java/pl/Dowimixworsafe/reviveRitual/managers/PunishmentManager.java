@@ -41,7 +41,7 @@ public class PunishmentManager {
             org.bukkit.Location respawnLoc = player.getRespawnLocation();
             if (respawnLoc == null)
                 respawnLoc = player.getWorld().getSpawnLocation();
-            plugin.getRevivalManager().revivePlayer(player, respawnLoc);
+            plugin.getRevivalManager().revivePlayer(player, respawnLoc, false);
             return;
         }
 

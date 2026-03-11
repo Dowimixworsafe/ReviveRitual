@@ -86,26 +86,58 @@ The ritual is protected against griefing — blood cauldrons survive explosions,
 All settings are in `config.yml` and can be changed in-game using `/rr set`:
 
 ```yaml
-# Language: 'en' or 'pl'
+# ReviveRitual Configuration File
+# ---------------------------
+
+# General Settings
+# Language of the plugin's messages. Available: 'en', 'pl'
 language: "en"
 
-# Punishment mode: ghost / spectator / ban
+# Defines what happens when a player dies
+# Available modes:
+# - ghost: Player becomes an invisible spirit accompanied by a mob, with limited interactions.
+# - spectator: Player enters Minecraft's built-in spectator mode and a teleport GUI opens.
+# - ban: Player is temporarily banned from the server upon death.
 punishment-mode: "ghost"
 
-# How long the punishment lasts (e.g., 30s, 15m, 1h, 1d)
+# Determines how long the punishment lasts before an automatic revive or unban
+# You can use suffixes: s (seconds), m (minutes), h (hours), d (days). Example: 3h, 30m, 1d
 punishment-time: "3h"
 
+# ---------------------------
 # Ghost Settings
-ghost-mob: "ALLAY"          # Companion mob (any EntityType)
-ghost-fly: true             # Allow ghost flight
-ghost-glow: true            # Glowing outline on companion
-ghost-haunt-enabled: true   # Enable haunting ability
-ghost-haunt-delay: 45       # Haunt cooldown (seconds)
+# ---------------------------
 
+# The mob that accompanies the ghost player. Only applies in 'ghost' mode.
+# Can be any valid Bukkit EntityType name, e.g., "ALLAY", "VEX", "BAT", "PARROT"
+ghost-mob: "ALLAY"
+
+# Should ghosts be allowed to fly? (True/False)
+ghost-fly: true
+
+# Should the ghost's accompanying mob have a glowing outline? (True/False)
+ghost-glow: true
+
+# Should ghosts be able to use the haunting item to scare alive players? (True/False)
+ghost-haunt-enabled: true
+
+# Cooldown time (in seconds) between ghost haunting abilities.
+ghost-haunt-delay: 45
+
+# ---------------------------
 # Grave Settings
-graves-enabled: true        # Generate graves on death
-grave-show-coordinates: true # Show grave coords in chat
-grave-cross-loot: false     # Allow looting others' graves
+# ---------------------------
+
+# Should a grave be automatically generated when a player dies to store their items and experience?
+# If false, items and experience will drop naturally.
+graves-enabled: true
+
+# Should the player receive a chat message with grave coordinates upon death?
+grave-show-coordinates: true
+
+# Should players be allowed to loot graves of other players?
+# Default: false (only grave owner can loot their own grave)
+grave-cross-loot: false
 ```
 
 ---

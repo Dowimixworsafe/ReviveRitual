@@ -72,7 +72,7 @@ public class GhostManager {
                         if (respawnLoc == null) {
                             respawnLoc = player.getWorld().getSpawnLocation();
                         }
-                        plugin.getRevivalManager().revivePlayer(player, respawnLoc);
+                        plugin.getRevivalManager().revivePlayer(player, respawnLoc, false);
 
                         continue;
                     }

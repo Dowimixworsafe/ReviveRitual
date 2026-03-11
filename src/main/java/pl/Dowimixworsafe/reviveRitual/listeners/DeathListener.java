@@ -3,16 +3,17 @@ package pl.Dowimixworsafe.reviveRitual.listeners;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+
 import org.bukkit.event.Listener;
+import pl.Dowimixworsafe.reviveRitual.utils.TimeUtils;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.PlayerRespawnEvent;
 import org.bukkit.scheduler.BukkitRunnable;
 import pl.Dowimixworsafe.reviveRitual.ReviveRitual;
-import pl.Dowimixworsafe.reviveRitual.utils.TimeUtils;
 
 import java.util.UUID;
 
-public class DeathListener implements Listener {
+    public class DeathListener implements Listener {
 
     private final ReviveRitual plugin;
 
@@ -45,8 +46,9 @@ public class DeathListener implements Listener {
         event.setKeepLevel(true);
         event.setDroppedExp(0);
 
-        long minutes = plugin.getConfig().getInt("punishment-time-minutes", 180);
-        long durationMillis = minutes * 60 * 1000L;
+        String timeConfig = plugin.getConfig().getString("punishment-time", plugin.getConfig().getString("punishment-time-minutes", "180m"));
+        long durationMillis = TimeUtils.parseTimeString(timeConfig);
+        if (durationMillis <= 0) durationMillis = 180 * 60 * 1000L; // Fallback to 3h if parse fails
         plugin.getDataManager().getData().set("reviveTime." + uuid, System.currentTimeMillis() + durationMillis);
         plugin.getDataManager().saveData();
 

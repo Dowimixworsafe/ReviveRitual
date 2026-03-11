@@ -13,8 +13,8 @@ language: "en"
 punishment-mode: "ghost"
 
 # Determines how long the punishment lasts before an automatic revive or unban
-# Time in minutes.
-punishment-time-minutes: 180
+# You can use suffixes: s (seconds), m (minutes), h (hours), d (days). Example: 3h, 30m, 1d
+punishment-time: "3h"
 
 # ---------------------------
 # Ghost Settings

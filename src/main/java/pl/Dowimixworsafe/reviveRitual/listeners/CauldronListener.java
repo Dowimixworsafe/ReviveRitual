@@ -72,7 +72,7 @@ public class CauldronListener implements Listener {
             if (targetName != null) {
                 UUID targetUUID = findPlayerUUID(targetName);
                 if (targetUUID != null) {
-                    plugin.getRevivalManager().revivePlayer(Bukkit.getOfflinePlayer(targetUUID), block.getLocation().add(0.5, 1, 0.5));
+                    plugin.getRevivalManager().revivePlayer(Bukkit.getOfflinePlayer(targetUUID), block.getLocation().add(0.5, 1, 0.5), true);
                     bloodEntity.remove();
                     item.setAmount(item.getAmount() - 1);
                     block.getWorld().strikeLightningEffect(block.getLocation());

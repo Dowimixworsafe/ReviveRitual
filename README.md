@@ -153,7 +153,7 @@ All commands require **OP** or `reviveritual.admin` permission.
 | `/rr reload` | Reload config & messages |
 | `/rr set lang <en\|pl>` | Change language |
 | `/rr set mode <ghost\|ban\|spectator>` | Change punishment mode |
-| `/rr set time <value>` | Change punishment duration (ex: 3h) |
+| `/rr set time <value>` | Change punishment duration (ex: 15s, 5m, 3h, 1d) |
 | `/rr set mob <TYPE>` | Change ghost companion mob |
 | `/rr set fly <true\|false>` | Toggle ghost flight |
 | `/rr set glow <true\|false>` | Toggle companion glow |
@@ -162,11 +162,7 @@ All commands require **OP** or `reviveritual.admin` permission.
 | `/rr set graves <true\|false>` | Toggle grave generation |
 | `/rr set grave-coords <true\|false>` | Toggle coordinate display |
 | `/rr set cross-loot <true\|false>` | Toggle cross-player looting |
-| `/rr cleargraves all` | Remove all graves |
-| `/rr cleargraves <nick>` | Remove a player's graves |
-| `/rr cleargraves <radius>` | Remove graves in radius |
-
-> All `/rr set` commands support **tab completion** with intelligent suggestions.
+| `/rr cleargraves <all\|nick\|radius>` | Remove all graves / Remove a player's graves / Remove graves in radius |
 
 ---
 
